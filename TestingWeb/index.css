@@ -1,0 +1,115 @@
+a, button {
+  all: unset;
+}
+
+body{
+  margin: 0;
+}
+
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif' !; }
+
+
+
+
+
+body {
+  scroll-snap-type: y mandatory !important;
+  overflow-y: scroll; }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-brand{
+  font-size: 24px;
+  font-weight: 700;;
+}
+
+nav .nav-group{
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul{
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  min-width: 300px;
+}
+
+.navbar ul li{
+  list-style: none;
+  
+}
+.navbar ul a{
+  padding-right: 20px;
+  color: rgba(0, 0, 0, .9) !important;
+
+  cursor: pointer;
+}
+
+.navbar ul a:focus{
+  color: rgba(0, 0, 0, .9) !important;
+}
+.navbar ul a:active{
+  color: rgba(0, 0, 0, .9) !important;
+}
+.navbar ul a:visited{
+  color: rgba(0, 0, 0, .9) !important;
+}
+
+section { 
+  margin: 30px 100px;
+  padding: 60px;
+  min-height: 85vh;
+  background-color: #5a6a70;
+  scroll-snap-align: start !important; }
+  section * {
+    color: #ffffff; }
+  section:nth-of-type(1) {
+    margin-top: 100px; }
+    section img{
+      width: 100%;
+    }
+  section h1 {
+    font-size: 64px; }
+  section dl a {
+    font-size: 32px; }
+  section dl dd {
+    color: rgba(255, 255, 255, 0.6); 
+     margin-left: 0px;
+    }
+    section dl dd {
+      margin-top: 15px; }
+  section ul {
+    margin-top: 30px;
+    padding-left: 0px;
+    counter-reset: counter-name; }
+    section ul li {
+      list-style: none;
+      padding: 10px 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between; }
+      section ul li:first-of-type {
+        border-top: 1px solid rgba(255, 255, 255, 0.1); }
+      section ul li::before {
+        counter-increment: counter-name;
+        content: "0" counter(counter-name) " ";
+        font-size: 12px;
+        margin-bottom: 3px; }
+
+/*# sourceMappingURL=index.css.map */

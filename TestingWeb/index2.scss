@@ -1,0 +1,97 @@
+body {
+    font-family: 'Montserrat';
+    
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(4, 720px);
+    padding-left: 15px;
+  }
+  
+  section {
+    margin: 30px 10px;
+    padding: 60px 90px 60px 60px;
+
+
+    height: calc(100vh - 14em);
+    //width: calc(100% - 1rem);
+    width: 700px;
+
+    background-color: #121212;
+
+    cursor: crosshair;
+    scroll-snap-align: start;
+
+    counter-reset: section-name;
+
+    *{
+        color: #ffffff;
+    }
+    h1{
+        font-size: 64px;
+    }
+    dl{
+        a{
+            font-size: 32px;
+
+            // &::before{
+            //     counter-increment: section-name;
+            //     content: '#' counter(section-name);
+            // }
+
+            &::after{
+                content: 'First Contents';
+                display: block;
+                position: absolute;
+
+
+                background-color: rgba(155,155,155,.9);
+                border-radius: 6px;
+                padding: 5px 20px;
+
+                font-size: 18px;
+
+                transform: scale(0);
+                transition: .2s;
+            }
+            &:hover{
+                &::after{
+                        transform: scale(1);
+                        transition: .2s;
+                    }
+                }
+            }
+        dd{
+            color: rgba(255,255,255,.6);
+        }
+    }
+    ul{
+        margin-top: 30px;
+        padding-left: 0px;
+        counter-reset: counter-name;
+        
+        li{
+            list-style: none;
+            padding: 10px 0px;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+
+            &:first-of-type{
+                border-top: 1px solid rgba(255,255,255,.1);
+            }
+
+            display: flex;
+            justify-content: space-between;
+
+            &::before{
+                counter-increment: counter-name;
+                content: '0' counter(counter-name) ' ';
+                //display: block;
+                font-size: 12px;                
+                margin-bottom: 3px;
+            }
+        }
+    }
+}
+  
+
+  /*# sourceMappingURL=index.css.map */
